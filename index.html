@@ -49,7 +49,7 @@
             justify-content: center;
             background: linear-gradient(135deg, #ff4081, #ff80ab);
             padding: 20px;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             border-radius: 25px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
         }
@@ -58,15 +58,16 @@
             color: #fff;
             text-decoration: none;
             padding: 15px 25px;
-            margin: 0 15px;
+            margin: 0 10px;
             border-radius: 20px;
             font-weight: bold;
             background-color: rgba(255, 255, 255, 0.1);
             transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
         }
 
-        .tab:hover {
+        .tab.active, .tab:hover {
             background-color: rgba(255, 255, 255, 0.2);
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
@@ -74,7 +75,7 @@
 
         h2 {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             font-size: 2.5em;
             color: #fff;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
@@ -158,16 +159,32 @@
             text-align: center;
             z-index: 10;
         }
+
+        .description {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #fff;
+            font-size: 1.2em;
+            max-width: 800px;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
     </style>
 </head>
 
 <body>
     <div class="overlay">
         <div class="tabs">
-            <a href="#links" class="tab">Links</a>
-            <a href="#socials" class="tab">Socials</a>
-            <a href="#discord" class="tab">Discord</a>
-            <a href="#projects" class="tab">Projects</a>
+            <a href="#" class="tab" data-target="links">Links</a>
+            <a href="#" class="tab" data-target="socials">Socials</a>
+            <a href="#" class="tab" data-target="discord">Discord</a>
+            <a href="#" class="tab" data-target="projects">Projects</a>
         </div>
 
         <!-- Main Description -->
@@ -176,7 +193,7 @@
             <p>This is a website for all of our projects and socials. Including links. We are software engineers and cybersecurity professionals from around the globe. We have our own unique projects, and even if they’re not unique, we ensure they are powerful and perfect enough to surpass our competitors.</p>
         </div>
 
-        <div id="links">
+        <div id="links" class="tab-content">
             <h2>Links</h2>
             <div class="container">
                 <div class="link-box"><a href="https://example.com/link1">Link 1</a></div>
@@ -185,7 +202,7 @@
             </div>
         </div>
 
-        <div id="socials">
+        <div id="socials" class="tab-content">
             <h2>Socials</h2>
             <div class="socials">
                 <p><a href="https://x.com/paack3t" target="_blank">X</a></p>
@@ -194,14 +211,14 @@
             </div>
         </div>
 
-        <div id="discord">
+        <div id="discord" class="tab-content">
             <h2>Discord</h2>
             <div class="discord-link">
                 <p><a href="https://discord.gg/ha5t3vqTyb" target="_blank">Join our Discord</a></p>
             </div>
         </div>
 
-        <div id="projects">
+        <div id="projects" class="tab-content">
             <h2>Projects</h2>
             <div class="container">
                 <div class="link-box"><a href="https://discord.gg/ha5t3vqTyb">Sigma Client</a></div>
@@ -238,6 +255,31 @@
             </pre>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const target = document.getElementById(this.getAttribute('data-target'));
+
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tabContents.forEach(tc => tc.classList.remove('active'));
+
+                    this.classList.add('active');
+                    target.classList.add('active');
+                });
+            });
+
+            // Default to showing the first tab
+            if (tabs.length > 0) {
+                tabs[0].click();
+            }
+        });
+    </script>
 </body>
 
 </html>
