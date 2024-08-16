@@ -7,17 +7,18 @@
     <title>UNBINDED LLC</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('https://via.placeholder.com/1920x1080'); /* Add your background image URL here */
+            background-image: url('https://via.placeholder.com/1920x1080'); /* Replace with a cool background image */
             background-size: cover;
             background-position: center;
-            color: #fff;
+            background-attachment: fixed;
+            color: #000;
         }
 
         .overlay {
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(10px);
             min-height: 100vh;
             padding: 20px;
@@ -25,25 +26,27 @@
 
         .tabs {
             display: flex;
-            justify-content: center;
-            background-color: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(5px);
-            padding: 10px 0;
-            margin-bottom: 20px;
+            justify-content: space-around;
+            background-color: #3A6EA5;
+            padding: 10px;
+            margin-bottom: 30px;
             border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         .tab {
-            color: white;
+            color: #fff;
             text-decoration: none;
-            padding: 14px 20px;
-            transition: background 0.3s, transform 0.3s;
-            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #3A6EA5;
+            border: 2px solid #FFF;
             border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.3s;
         }
 
         .tab:hover {
-            background-color: #575757;
+            background-color: #2B569A;
             transform: translateY(-2px);
         }
 
@@ -51,6 +54,8 @@
             text-align: center;
             margin-bottom: 20px;
             font-size: 2em;
+            color: #333;
+            text-shadow: 1px 1px 2px #fff;
         }
 
         .container {
@@ -60,20 +65,21 @@
         }
 
         .link-box, .box {
-            background: rgba(255, 255, 255, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: #f3f3f3;
+            border: 2px solid #ccc;
             border-radius: 10px;
             margin: 10px;
             padding: 20px;
             width: 250px;
             text-align: center;
-            backdrop-filter: blur(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
         }
 
         .link-box:hover, .box:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
         }
 
         .socials, .discord-link {
@@ -82,12 +88,32 @@
         }
 
         a {
-            color: #00bfff;
+            color: #0000EE;
             text-decoration: none;
+            font-weight: bold;
         }
 
         a:hover {
             text-decoration: underline;
+        }
+
+        /* Windows XP style buttons */
+        .xp-button {
+            background: linear-gradient(180deg, #E0E0E0 0%, #C0C0C0 100%);
+            border: 2px solid #808080;
+            padding: 10px 15px;
+            border-radius: 4px;
+            color: #000;
+            text-shadow: 1px 1px 0 #fff;
+            box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #aaa;
+            font-family: 'Trebuchet MS', sans-serif;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .xp-button:hover {
+            background: linear-gradient(180deg, #D0D0D0 0%, #B0B0B0 100%);
+            border-color: #404040;
         }
     </style>
 </head>
@@ -95,43 +121,43 @@
 <body>
     <div class="overlay">
         <div class="tabs">
-            <a href="#links" class="tab">Links</a>
-            <a href="#socials" class="tab">Socials</a>
-            <a href="#discord" class="tab">Discord</a>
-            <a href="#projects" class="tab">Projects</a>
+            <a href="#links" class="tab xp-button">Links</a>
+            <a href="#socials" class="tab xp-button">Socials</a>
+            <a href="#discord" class="tab xp-button">Discord</a>
+            <a href="#projects" class="tab xp-button">Projects</a>
         </div>
 
         <div id="links">
             <h2>Links</h2>
             <div class="container">
-                <div class="link-box"><a href="https://example.com/link1">Link 1</a></div>
-                <div class="link-box"><a href="https://example.com/link2">Link 2</a></div>
-                <div class="link-box"><a href="https://example.com/link3">Link 3</a></div>
+                <div class="link-box xp-button"><a href="https://example.com/link1">Link 1</a></div>
+                <div class="link-box xp-button"><a href="https://example.com/link2">Link 2</a></div>
+                <div class="link-box xp-button"><a href="https://example.com/link3">Link 3</a></div>
             </div>
         </div>
 
         <div id="socials">
             <h2>Socials</h2>
             <div class="socials">
-                <p><a href="https://x.com/paack3t" target="_blank">X</a></p>
-                <p><a href="https://facebook.com/example" target="_blank">Facebook</a></p>
-                <p><a href="https://instagram.com/example" target="_blank">Instagram</a></p>
+                <p><a href="https://x.com/paack3t" target="_blank" class="xp-button">X</a></p>
+                <p><a href="https://facebook.com/example" target="_blank" class="xp-button">Facebook</a></p>
+                <p><a href="https://instagram.com/example" target="_blank" class="xp-button">Instagram</a></p>
             </div>
         </div>
 
         <div id="discord">
             <h2>Discord</h2>
             <div class="discord-link">
-                <p><a href="https://discord.gg/ha5t3vqTyb" target="_blank">Join our Discord</a></p>
+                <p><a href="https://discord.gg/ha5t3vqTyb" target="_blank" class="xp-button">Join our Discord</a></p>
             </div>
         </div>
 
         <div id="projects">
             <h2>Projects</h2>
             <div class="container">
-                <div class="link-box"><a href="https://discord.gg/ha5t3vqTyb">Sigma Client</a></div>
-                <div class="link-box"><a href="https://discord.gg/ha5t3vqTyb">OSINT</a></div>
-                <div class="link-box"><a href="https://discord.gg/ha5t3vqTyb">wNet AI</a></div>
+                <div class="link-box xp-button"><a href="https://discord.gg/ha5t3vqTyb">Sigma Client</a></div>
+                <div class="link-box xp-button"><a href="https://discord.gg/ha5t3vqTyb">OSINT</a></div>
+                <div class="link-box xp-button"><a href="https://discord.gg/ha5t3vqTyb">wNet AI</a></div>
             </div>
         </div>
     </div>
