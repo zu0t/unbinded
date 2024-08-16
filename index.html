@@ -9,23 +9,34 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
+            background-color: #f4f4f4;
         }
         .tabs {
             display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 10px 0;
             margin-bottom: 20px;
         }
         .tab {
-            padding: 10px 20px;
-            background-color: #f1f1f1;
-            margin-right: 5px;
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            transition: background 0.3s;
             cursor: pointer;
         }
-        .link-box {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin: 10px 0;
+        .tab:hover {
+            background-color: #575757;
         }
-        .socials {
+        .link-box, .box {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 10px 0;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .socials, .discord-link {
             margin: 20px 0;
         }
     </style>
@@ -33,27 +44,29 @@
 <body>
 
     <div class="tabs">
-        <div class="tab">Home</div>
-        <div class="tab">About</div>
-        <div class="tab">Contact</div>
+        <a href="#links" class="tab">Links</a>
+        <a href="#socials" class="tab">Socials</a>
+        <a href="#discord" class="tab">Discord</a>
+        <a href="#projects" class="tab">Projects</a>
     </div>
 
     <h2>Links</h2>
-    <div class="link-box"><a href="https://example.com/project1">Project 1</a></div>
-    <div class="link-box"><a href="https://example.com/project2">Project 2</a></div>
-    <div class="link-box"><a href="https://example.com/project3">Project 3</a></div>
+    <div id="links" class="link-box"><a href="https://example.com/link1">Empty</a></div>
+    <div class="link-box"><a href="https://example.com/link2">Empty</a></div>
+    <div class="link-box"><a href="https://example.com/link3">Empty</a></div>
 
     <h2>Socials</h2>
-    <div class="socials">
-        <p><a href="https://x.com/paack3t">X</a></p>
-        <p><a href="https://discord.gg/ha5t3vqTyb">Discord</a></p>
+    <div id="socials" class="socials">
+        <p><a href="https://x.com/paack3t" target="_blank">X</a></p>
     </div>
 
     <h2>Discord</h2>
-    <p><a href="https://discord.gg/ha5t3vqTyb">Join our Discord</a></p>
+    <div id="discord" class="discord-link">
+        <p><a href="https://discord.gg/ha5t3vqTyb" target="_blank">Join our Discord</a></p>
+    </div>
 
     <h2>Projects</h2>
-    <div class="link-box"><a href="https://discord.gg/ha5t3vqTyb">Sigma Client</a></div>
+    <div id="projects" class="link-box"><a href="https://discord.gg/ha5t3vqTyb">Sigma Client</a></div>
     <div class="link-box"><a href="https://discord.gg/ha5t3vqTyb">OSINT</a></div>
     <div class="link-box"><a href="https://discord.gg/ha5t3vqTyb">wNet AI</a></div>
 
