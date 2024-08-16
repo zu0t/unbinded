@@ -14,61 +14,61 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('https://cdn.discordapp.com/attachments/1273926399429972022/1273985580480335994/KiET4Xs.png?ex=66c09b07&is=66bf4987&hm=bc80b753afb35dcef72b010e7de7b9c63672b686c0ed8bbe852b18b2346cf7f4&');
+            background-image: url('https://cdn.discordapp.com/attachments/1273926399429972022/1273985580480335994/KiET4Xs.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            color: #000;
+            color: #fff;
             overflow: hidden; /* Prevent scrolling */
         }
 
         .overlay {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(4px);
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(6px);
             min-height: 100vh;
-            padding: 20px;
+            padding: 40px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-            border-radius: 10px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
         }
 
         .tabs {
             display: flex;
             justify-content: center;
-            background: linear-gradient(135deg, #6e8efb, #a777e3);
-            padding: 15px;
-            margin-bottom: 30px;
+            background: linear-gradient(135deg, #ff4081, #ff80ab);
+            padding: 20px;
+            margin-bottom: 40px;
             border-radius: 30px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
         .tab {
             color: #fff;
             text-decoration: none;
-            padding: 12px 25px;
-            margin: 0 10px;
+            padding: 15px 30px;
+            margin: 0 15px;
             border-radius: 20px;
             font-weight: bold;
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.2);
             transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         .tab:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-3px);
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-5px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
         h2 {
             text-align: center;
-            margin-bottom: 20px;
-            font-size: 2em;
-            color: #333;
-            text-shadow: 1px 1px 2px #fff;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            color: #fff;
+            text-shadow: 2px 2px 4px #000;
         }
 
         .container {
@@ -78,69 +78,74 @@
         }
 
         .link-box, .box {
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            margin: 10px;
-            padding: 20px;
-            width: 250px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            margin: 20px;
+            padding: 30px;
+            width: 300px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s, box-shadow 0.3s;
             cursor: pointer;
             backdrop-filter: blur(4px);
+            color: #fff;
+            font-size: 1.2em;
         }
 
         .link-box:hover, .box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
         }
 
         .socials, .discord-link {
             text-align: center;
-            margin: 20px 0;
+            margin: 30px 0;
         }
 
         a {
-            color: #007bff;
+            color: #ff80ab;
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s;
         }
 
         a:hover {
-            color: #0056b3;
+            color: #ff4081;
             text-decoration: underline;
         }
 
-        /* Custom Spinning ASCII Art */
+        /* Enhanced Spinning ASCII Art */
         @keyframes custom-spin {
             0% {
-                transform: rotate(0deg) translateX(0) scale(1);
+                transform: rotate(0deg);
             }
             25% {
-                transform: rotate(90deg) translateX(-50px) scale(1.1);
+                transform: rotate(90deg);
             }
             50% {
-                transform: rotate(180deg) translateX(0) scale(1);
+                transform: rotate(180deg);
             }
             75% {
-                transform: rotate(270deg) translateX(50px) scale(1.1);
+                transform: rotate(270deg);
             }
             100% {
-                transform: rotate(360deg) translateX(0) scale(1);
+                transform: rotate(360deg);
             }
         }
 
         .ascii-art {
             font-family: 'Courier New', Courier, monospace;
             text-align: center;
-            margin: 20px auto;
+            margin: 40px auto;
             width: 100%;
-            max-width: 500px;
-            color: #333;
-            animation: custom-spin 8s linear infinite;
-            font-size: 1.5em;
+            max-width: 600px;
+            color: #ff80ab;
+            animation: custom-spin 10s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            font-size: 2em;
+            text-shadow: 2px 2px 4px #000;
+            letter-spacing: 2px;
         }
+
     </style>
 </head>
 
@@ -190,12 +195,11 @@
         <!-- Enhanced Spinning ASCII Art -->
         <div class="ascii-art">
             <pre>
-                                   
-    /  /  /  / 
-   /__/  /__/  
-     /     /   
-    /     /    
-                                               
+          __   __   __  
+          \_\  \_\  \_\ 
+             \   \   \  
+            /   /   /  
+          /__/ /__/ /__/
             </pre>
         </div>
     </div>
