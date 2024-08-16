@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,67 +9,132 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
+            padding: 0;
+            background-image: url('https://via.placeholder.com/1920x1080'); /* Add your background image URL here */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
         }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
         .tabs {
             display: flex;
-            justify-content: space-around;
-            background-color: #333;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px);
             padding: 10px 0;
             margin-bottom: 20px;
+            border-radius: 10px;
         }
+
         .tab {
             color: white;
             text-decoration: none;
             padding: 14px 20px;
-            transition: background 0.3s;
-            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            margin: 0 10px;
+            border-radius: 5px;
         }
+
         .tab:hover {
             background-color: #575757;
+            transform: translateY(-2px);
         }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
         .link-box, .box {
-            border: 1px solid #ccc;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            margin: 10px;
             padding: 20px;
-            margin: 10px 0;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 250px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
+
+        .link-box:hover, .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
         .socials, .discord-link {
+            text-align: center;
             margin: 20px 0;
+        }
+
+        a {
+            color: #00bfff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
+
 <body>
+    <div class="overlay">
+        <div class="tabs">
+            <a href="#links" class="tab">Links</a>
+            <a href="#socials" class="tab">Socials</a>
+            <a href="#discord" class="tab">Discord</a>
+            <a href="#projects" class="tab">Projects</a>
+        </div>
 
-    <div class="tabs">
-        <a href="#links" class="tab">Links</a>
-        <a href="#socials" class="tab">Socials</a>
-        <a href="#discord" class="tab">Discord</a>
-        <a href="#projects" class="tab">Projects</a>
+        <div id="links">
+            <h2>Links</h2>
+            <div class="container">
+                <div class="link-box"><a href="https://example.com/link1">Link 1</a></div>
+                <div class="link-box"><a href="https://example.com/link2">Link 2</a></div>
+                <div class="link-box"><a href="https://example.com/link3">Link 3</a></div>
+            </div>
+        </div>
+
+        <div id="socials">
+            <h2>Socials</h2>
+            <div class="socials">
+                <p><a href="https://x.com/paack3t" target="_blank">X</a></p>
+                <p><a href="https://facebook.com/example" target="_blank">Facebook</a></p>
+                <p><a href="https://instagram.com/example" target="_blank">Instagram</a></p>
+            </div>
+        </div>
+
+        <div id="discord">
+            <h2>Discord</h2>
+            <div class="discord-link">
+                <p><a href="https://discord.gg/ha5t3vqTyb" target="_blank">Join our Discord</a></p>
+            </div>
+        </div>
+
+        <div id="projects">
+            <h2>Projects</h2>
+            <div class="container">
+                <div class="link-box"><a href="https://discord.gg/ha5t3vqTyb">Sigma Client</a></div>
+                <div class="link-box"><a href="https://discord.gg/ha5t3vqTyb">OSINT</a></div>
+                <div class="link-box"><a href="https://discord.gg/ha5t3vqTyb">wNet AI</a></div>
+            </div>
+        </div>
     </div>
-
-    <h2>Links</h2>
-    <div id="links" class="link-box"><a href="https://example.com/link1">Empty</a></div>
-    <div class="link-box"><a href="https://example.com/link2">Empty</a></div>
-    <div class="link-box"><a href="https://example.com/link3">Empty</a></div>
-
-    <h2>Socials</h2>
-    <div id="socials" class="socials">
-        <p><a href="https://x.com/paack3t" target="_blank">X</a></p>
-    </div>
-
-    <h2>Discord</h2>
-    <div id="discord" class="discord-link">
-        <p><a href="https://discord.gg/ha5t3vqTyb" target="_blank">Join our Discord</a></p>
-    </div>
-
-    <h2>Projects</h2>
-    <div id="projects" class="link-box"><a href="https://discord.gg/ha5t3vqTyb">Sigma Client</a></div>
-    <div class="link-box"><a href="https://discord.gg/ha5t3vqTyb">OSINT</a></div>
-    <div class="link-box"><a href="https://discord.gg/ha5t3vqTyb">wNet AI</a></div>
-
 </body>
+
 </html>
