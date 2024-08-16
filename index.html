@@ -17,17 +17,24 @@
             color: #000;
         }
 
+<head></head>
+<link rel="icon" type="image/png" href="https://cdn.discordapp.com/attachments/1273926399429972022/1273987204859035764/AikFqMO.png?ex=66c09c8b&is=66bf4b0b&hm=08e709125ec7821593fd5791c8a986bb7a76b77caa9cee029b683fd643ff70cb&" sizes="32x32">
+
         .overlay {
-            background: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(4px);
             min-height: 100vh;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .tabs {
             display: flex;
-            justify-content: space-around;
-            background-color: rgba(58, 110, 165, 0.7);
+            justify-content: center;
+            background-color: rgba(0, 123, 255, 0.7);
             padding: 10px;
             margin-bottom: 30px;
             border-radius: 10px;
@@ -38,18 +45,20 @@
         .tab {
             color: #fff;
             text-decoration: none;
-            padding: 10px 20px;
-            background-color: rgba(58, 110, 165, 0.7);
-            border: 2px solid #FFF;
-            border-radius: 5px;
+            padding: 12px 25px;
+            background-color: rgba(0, 123, 255, 0.7);
+            border-radius: 30px;
             font-weight: bold;
-            transition: background 0.3s, transform 0.3s;
+            margin: 0 10px;
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(4px);
         }
 
         .tab:hover {
-            background-color: #2B569A;
-            transform: translateY(-2px);
+            background-color: rgba(0, 105, 230, 1);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
 
         h2 {
@@ -67,8 +76,7 @@
         }
 
         .link-box, .box {
-            background: rgba(243, 243, 243, 0.8);
-            border: 2px solid #ccc;
+            background: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
             margin: 10px;
             padding: 20px;
@@ -91,42 +99,33 @@
         }
 
         a {
-            color: #0000EE;
+            color: #007bff;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s;
         }
 
         a:hover {
+            color: #0056b3;
             text-decoration: underline;
         }
 
-        /* Windows XP style buttons */
-        .xp-button {
-            background: linear-gradient(180deg, #E0E0E0 0%, #C0C0C0 100%);
-            border: 2px solid #808080;
-            padding: 10px 15px;
-            border-radius: 4px;
-            color: #000;
-            text-shadow: 1px 1px 0 #fff;
-            box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #aaa;
-            font-family: 'Trebuchet MS', sans-serif;
-            cursor: pointer;
-            transition: all 0.2s;
-            backdrop-filter: blur(4px);
-        }
-
-        .xp-button:hover {
-            background: linear-gradient(180deg, #D0D0D0 0%, #B0B0B0 100%);
-            border-color: #404040;
-        }
-
-        /* Spinning ASCII Art */
+        /* Enhanced Spinning ASCII Art */
         @keyframes spin {
             0% {
-                transform: rotate(0deg);
+                transform: rotate(0deg) translateX(0) scale(1);
+            }
+            25% {
+                transform: rotate(180deg) translateX(-50px) scale(1.1);
+            }
+            50% {
+                transform: rotate(360deg) translateX(0) scale(1);
+            }
+            75% {
+                transform: rotate(540deg) translateX(50px) scale(1.1);
             }
             100% {
-                transform: rotate(360deg);
+                transform: rotate(720deg) translateX(0) scale(1);
             }
         }
 
@@ -137,7 +136,7 @@
             width: 100%;
             max-width: 500px;
             color: #333;
-            animation: spin 10s linear infinite;
+            animation: spin 8s linear infinite;
         }
     </style>
 </head>
@@ -145,60 +144,59 @@
 <body>
     <div class="overlay">
         <div class="tabs">
-            <a href="#links" class="tab xp-button">Links</a>
-            <a href="#socials" class="tab xp-button">Socials</a>
-            <a href="#discord" class="tab xp-button">Discord</a>
-            <a href="#projects" class="tab xp-button">Projects</a>
+            <a href="#links" class="tab">Links</a>
+            <a href="#socials" class="tab">Socials</a>
+            <a href="#discord" class="tab">Discord</a>
+            <a href="#projects" class="tab">Projects</a>
         </div>
 
         <div id="links">
             <h2>Links</h2>
             <div class="container">
-                <div class="link-box xp-button"><a href="https://example.com/link1">Link 1</a></div>
-                <div class="link-box xp-button"><a href="https://example.com/link2">Link 2</a></div>
-                <div class="link-box xp-button"><a href="https://example.com/link3">Link 3</a></div>
+                <div class="link-box"><a href="https://example.com/link1">Link 1</a></div>
+                <div class="link-box"><a href="https://example.com/link2">Link 2</a></div>
+                <div class="link-box"><a href="https://example.com/link3">Link 3</a></div>
             </div>
         </div>
 
         <div id="socials">
             <h2>Socials</h2>
             <div class="socials">
-                <p><a href="https://x.com/paack3t" target="_blank" class="xp-button">X</a></p>
-                <p><a href="https://facebook.com/example" target="_blank" class="xp-button">Facebook</a></p>
-                <p><a href="https://instagram.com/example" target="_blank" class="xp-button">Instagram</a></p>
+                <p><a href="https://x.com/paack3t" target="_blank">X</a></p>
+                <p><a href="https://facebook.com/example" target="_blank">Facebook</a></p>
+                <p><a href="https://instagram.com/example" target="_blank">Instagram</a></p>
             </div>
         </div>
 
         <div id="discord">
             <h2>Discord</h2>
             <div class="discord-link">
-                <p><a href="https://discord.gg/ha5t3vqTyb" target="_blank" class="xp-button">Join our Discord</a></p>
+                <p><a href="https://discord.gg/ha5t3vqTyb" target="_blank">Join our Discord</a></p>
             </div>
         </div>
 
         <div id="projects">
             <h2>Projects</h2>
             <div class="container">
-                <div class="link-box xp-button"><a href="https://discord.gg/ha5t3vqTyb">Sigma Client</a></div>
-                <div class="link-box xp-button"><a href="https://discord.gg/ha5t3vqTyb">OSINT</a></div>
-                <div class="link-box xp-button"><a href="https://discord.gg/ha5t3vqTyb">wNet AI</a></div>
+                <div class="link-box"><a href="https://discord.gg/ha5t3vqTyb">Sigma Client</a></div>
+                <div class="link-box"><a href="https://discord.gg/ha5t3vqTyb">OSINT</a></div>
+                <div class="link-box"><a href="https://discord.gg/ha5t3vqTyb">wNet AI</a></div>
             </div>
         </div>
 
-        <!-- Spinning ASCII Art -->
+        <!-- Enhanced Spinning ASCII Art -->
         <div class="ascii-art">
             <pre>
-            _________
-           /         \
-          /___________\
-         |             |
-         |   UNBINDED  |
-         |             |
-         |_____________|
-          \___________/
+            
+           
+          
+                      
+            UNBINDED LLC
+                      
+         
+          
             </pre>
         </div>
-
     </div>
 </body>
 
